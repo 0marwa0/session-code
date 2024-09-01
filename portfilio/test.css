@@ -1,0 +1,89 @@
+.container {
+  margin-top: 30px;
+  display: flex;
+}
+.letter {
+  opacity: 0;
+  animation: show 0.1s;
+  animation-fill-mode: forwards;
+}
+
+.l1 {
+  animation-delay: 0.1s;
+}
+.l2 {
+  animation-delay: 0.5s;
+}
+.l3 {
+  animation-delay: 1s;
+}
+.l4 {
+  animation-delay: 1.5s;
+}
+.l5 {
+  animation-delay: 2s;
+}
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+#output {
+  color: red;
+}
+.content-title {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 84px;
+  border: 2px solid red;
+  animation: move 2s linear;
+}
+@keyframes move {
+  form {
+    border: 2px solid rgb(195, 255, 0);
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+#spinner {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+#box {
+  width: 200px;
+  height: 200px;
+  margin: 200px;
+  background-color: blueviolet;
+  animation: move 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move {
+  from {
+    background-color: red;
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    background-color: yellow;
+    transform: translateX(-100px);
+  }
+}
