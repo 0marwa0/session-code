@@ -1,0 +1,19 @@
+.user {
+  display: flex;
+  border: 2px solid gray;
+  gap: 20px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: 20px;
+  background-color: rgb(226, 223, 223);
+}
+.user button {
+  border: none;
+  color: red;
+  border-radius: 20px;
+  padding: 5px;
+  height: max-content;
+  background-color: rgb(224, 152, 152);
+}
