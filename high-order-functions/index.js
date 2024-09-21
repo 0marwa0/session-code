@@ -75,4 +75,18 @@ let fitlerUsers = users.filter(removeItem);
 users = fitlerUsers;
 console.log(fitlerUsers, "filtered users");
 
-//
+////////////////////////////// reduce //////////////////
+// let years = users.map(function (x, index) {
+//   console.log(x, index, "single item in users array");
+// });
+let nums = [22, 44, 55, 77];
+
+let add = (y, x, i) => {
+  let res = y + x;
+  console.log(res, i);
+  return res;
+};
+let totalYears = nums.reduce(add, 0);
+// console.log(totalYears, "total years");
+// 22;
+// 66;
