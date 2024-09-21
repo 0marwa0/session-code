@@ -39,9 +39,6 @@ function update(user) {
   }
 }
 
-//let updatedUsers = users.map(update);
-
-// console.log(updatedUsers, "update age");
 users.push({ name: "Noor", age: 27 });
 
 // console.log(users);
@@ -53,16 +50,29 @@ users.forEach((item) => {
 });
 console.log(myIds, "my ides");
 
-let filteredUsers = users.filter((item) => {
-  return item.name != "Ahmed";
-});
+// let filteredUsers = users.filter((item) => {
+//   return item.name != "Ahmed";
+// });
 
-let deleteItem = (selectedId) => {
-  let fitlerUsers = users.filter((item) => {
-    return item.id != selectedId;
-  });
-  users = fitlerUsers;
+///////////////////////////////// update element using map ///////////////////////////////
+function updateUser(user) {
+  let seletctedId = 123;
+  if (user.id == seletctedId) {
+    return { age: 100 };
+  } else {
+    return user;
+  }
+}
+let updatedUsers = users.map(update);
+console.log(updatedUsers, "update age");
+///////////////////////////////// removing element using map ///////////////////////////////
+
+let removeItem = (item) => {
+  let selectedId = "123";
+  return item.id != selectedId;
 };
+let fitlerUsers = users.filter(removeItem);
+users = fitlerUsers;
+console.log(fitlerUsers, "filtered users");
 
-deleteItem("33");
-console.log(users, "filtered users");
+//
