@@ -11,13 +11,13 @@
       <table>
         <tbody>
           <tr>
-            <td colspan="4"><input type="text" /></td>
+            <td colspan="4"><input type="text" id="input" /></td>
           </tr>
           <tr>
-            <td><button>1</button></td>
-            <td><button>2</button></td>
-            <td><button>3</button></td>
-            <td><button>+</button></td>
+            <td><button onclick="getValue('1')">1</button></td>
+            <td><button onclick="getValue('2')">2</button></td>
+            <td><button onclick="getValue('3')">3</button></td>
+            <td><button onclick="getValue('+')">+</button></td>
           </tr>
           <tr>
             <td><button>4</button></td>
@@ -34,8 +34,8 @@
           <tr>
             <td><button>0</button></td>
             <td><button>/</button></td>
-            <td><button>c</button></td>
-            <td><button>=</button></td>
+            <td><button onclick="clearText()">c</button></td>
+            <td><button onclick="showResult()">=</button></td>
           </tr>
         </tbody>
       </table>
