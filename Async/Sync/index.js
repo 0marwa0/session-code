@@ -16,7 +16,11 @@ let getUsers = () => {
 function showResult(users) {
   users.forEach((element) => {
     let div = document.createElement("div");
-    div.textContent = element.name;
+    let img = document.createElement("img");
+    img.src = element.image;
+    img.style.width = "20px";
+    div.textContent = element.title;
+    div.appendChild(img);
     document.body.appendChild(div);
   });
 }
@@ -57,10 +61,22 @@ async function findUserAsync(userName) {
 }
 
 /// fetch data from an api
-let api = fetch("https://fakestoreapi.com/products/5")
-  .then((x) => x.json())
-  .then((res) => {
-    console.log(res);
-  })
-  .catch((x) => console.log(x));
-console.log(api);
+// let api = fetch("https://fakestoreapi.com/products/5")
+//   .then((x) => x.json())
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((x) => console.log(x));
+// console.log(api);
+
+async function getProducts() {
+  try {
+    let products = await fetch("https://fakestoreapi.com/products");
+    let data = await products.json();
+    console.log(data);
+    showResult(data);
+  } catch (error) {
+    showError("Something wrong happen in the api call");
+  }
+}
+console.log(getProducts());
