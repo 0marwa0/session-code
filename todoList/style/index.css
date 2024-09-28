@@ -7,6 +7,16 @@ body {
   font-family: "Poppins";
   background-color: var(--background-color);
 }
+.todo-item {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text-containe {
+  display: flex;
+  gap: 5px;
+}
 .page-container {
   display: flex;
   justify-content: center;
@@ -33,6 +43,7 @@ body {
   outline: none;
 }
 .todo-input {
+  margin-bottom: 40px;
   display: flex;
   gap: 10px;
 }
