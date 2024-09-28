@@ -1,0 +1,54 @@
+:root {
+  --main-color: #6c63ff;
+  --background-color: #f7f7f7;
+}
+
+body {
+  font-family: "Poppins";
+  background-color: var(--background-color);
+}
+.page-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 150px;
+}
+.title {
+  font-size: 26px;
+}
+.search-input-container {
+  display: flex;
+  padding: 8px;
+  border-radius: 5px;
+  width: 400px;
+  border: 2px solid var(--main-color);
+}
+.search-input-container input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+}
+.search-input-container input:focus {
+  outline: none;
+}
+.todo-input {
+  display: flex;
+  gap: 10px;
+}
+select {
+  background-color: var(--main-color);
+  color: white;
+  width: 70px;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+}
+#mode {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+}
