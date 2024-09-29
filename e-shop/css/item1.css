@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+h1{
+  color: green;
+}
+.Geschäft{
+    text-decoration: none;
+}
+.banner {
+      background-color: green;
+      color: white;
+      display: flex;
+      padding: 10px;
+      justify-content: space-between;
+}
+.select {
+      background-color: green;
+      border: none;
+      color: white;
+}
+.save{
+  margin-bottom: 7px;
+  margin-right: 5px;
+  width: 20px;
+}
+.toggles{
+  display: flex;
+}
+.phone-icon {
+    width: 20px;
+}
+.phone-section {
+    display: flex;
+    gap: 8px;
+}
+.account , .cart {
+    justify-content: space-evenly;
+    display: flex;
+    margin-bottom: 15px;
+}
+.search{
+    border-radius: 5px;
+    background-color: rgb(193, 201, 210);
+    width: 250px;
+    height: 25px;
+    border: 0;
+    display: flex;
+}
+.search-icon{
+    width: 20px;
+    margin-right: 5px;
+}
+  .head2{
+    display: flex;
+    gap: 75px;
+    justify-content: space-between;
+    padding: 15px;   
+}
+.card-img{
+    width: 300px;
+}
+.product{
+    display: flex;
+}
+.product-name{
+    font-size: 25px;
+}
+.star{
+    width: 105px;
+}
+.stars{
+    display: flex;
+}
+.rating{
+    margin-top: 15px;
+    margin-right: 5px;
+}
+.ratings{
+    margin-top: 15px;
+    margin-left: 25px;
+    color: green;
+}
+h5{
+    font-weight: 300;
+}
+hr{
+    height: 0.1px;
+}
+.price{
+    display: flex;
+}
+.discount{
+    color: red;
+    font-size: 25px;
+    font-weight: 200;
+}
+.offer{
+    font-size: 25px;
+    font-weight: 200;
+    margin-left: 15px;
+}
+s{
+    color: rgb(202, 195, 195);
+}
+.return{
+    color: green;
+    margin: 15px 0;
+}
+hr{
+    margin: 5px;
+}
+.info{
+    display: flex;
+}
+.i2{
+    width: 600px;
+    height: 625px;
+    border-radius: 20px;
+    border: 2px solid gray; 
+    background-color: white;
+    margin-top: 15px;
+    margin-left: 40px;
+    margin-right: 5px;
+    padding: 5px;
+}
+h4{
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+.add-cart, .buy-now{
+    font-size: 15px;
+    padding: 7px 15px;
+    border-radius: 50px;
+    border: 1px solid black;
+    background-color: green;
+    width: 95%; 
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  .add-cart{
+    background-color: lightgreen;
+    margin-bottom: 15px;
+  }
+  .Quantity{
+    width: 95%;
+    margin: 15px 0;
+    padding: 7px;
+  }
