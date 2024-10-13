@@ -8,12 +8,34 @@
     <link rel="stylesheet" type="text/css" href="./css/model.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    /> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="..." class="rounded mr-2" alt="..." />
+        <strong class="mr-auto">Bootstrap</strong>
+        <small class="text-muted">11 mins ago</small>
+        <button
+          type="button"
+          class="ml-2 mb-1 close"
+          data-dismiss="toast"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body">Hello, world! This is a toast message.</div>
+    </div>
     <div class="banner page-container">
       <!-- <div class="page-container"> -->
       <div class="phone-section">
@@ -24,9 +46,9 @@
         <p>Get 50% off on selected items | Shop Now</p>
       </div>
       <div class="select-section">
-        <select name="languages" class="select" id="langs">
-          <option value="english">english</option>
-          <option value="Russian">Russian</option>
+        <select name="languages" class="select" id="lang-select">
+          <option value="en">english</option>
+          <option value="ar">Arabic</option>
           <option value="Japanese">Japanese</option>
           <option value="Korean">Korean</option>
         </select>
@@ -42,7 +64,7 @@
     </div>
     <div class="head2 page-container">
       <a href="index.html" title="Geschäft" alt="Geschäft" class="Geschäft">
-        <h1>Geschäft</h1>
+        <h1 id="title"></h1>
       </a>
       <p>Categories</p>
       <p>Deals</p>
@@ -98,7 +120,7 @@
           <option vlaue="5 stars">5 stars</option>
         </select>
 
-        <select name="Color" class="option">
+        <select name="Color" id="color_select" class="option">
           <option value="Color">Color</option>
           <option vlaue="Black">Black</option>
           <option vlaue="White">White</option>
@@ -125,8 +147,8 @@
       </div>
     </div>
     <h3 class="page-container">Headphones For You!</h3>
-    <div class="items page-container">
-      <div class="item1">
+    <div class="items page-container" id="items1">
+      <!-- <div class="item1">
         <a href="./html/item1.html" class="link">
           <div class="card">
             <div class="img-section">
@@ -237,11 +259,11 @@
             <button class="add-cart">ADD IN CART</button>
           </div>
         </a>
-      </div>
+      </div> -->
     </div>
-    <h3>Earphones For Your Ears!</h3>
-    <div class="items page-container">
-      <div class="item1">
+    <h3 class="page-container">Earphones For Your Ears!</h3>
+    <div id="items4" class="items4 items page-container">
+      <!-- <div class="item1">
         <div class="card">
           <div class="img-section">
             <div class="img-container">
@@ -345,9 +367,9 @@
         <div class="add">
           <button class="add-cart">ADD IN CART</button>
         </div>
-      </div>
+      </div> -->
     </div>
-    <h3>Other products!</h3>
+    <h3 class="page-container">Other products!</h3>
     <div id="items3" class="items3"></div>
     <div class="layout hide">
       <div class="content">
@@ -357,6 +379,22 @@
         <div>Total: <span id="total_price"></span></div>
       </div>
     </div>
+
     <script type="module" src="./js/e-shop.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

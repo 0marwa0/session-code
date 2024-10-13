@@ -1,7 +1,9 @@
-import { addToCart } from "./e-shop.js";
+import { addToCart, showCartItems } from "./e-shop.js";
+// import { products } from "./data.js";
 
-let cards_container = document.getElementById("items3");
-export function showItems(data) {
+// let cards_container = document.getElementById("items3");
+export function showItems(data, cards_container) {
+  cards_container.innerHTML = "";
   data.forEach((item) => {
     let card_item = document.createElement("div");
     card_item.classList.add("item");
@@ -24,8 +26,9 @@ export function showItems(data) {
     let btn = document.createElement("button");
     btn.classList.add("add-cart");
     img.src = item.image;
+
     starImage.src = "./images/Star.png";
-    pPrice.textContent = item.price;
+    pPrice.textContent = item.price + " $";
     pTitle.textContent = item.title;
 
     btn.textContent = "ADD IN CART";
@@ -33,16 +36,50 @@ export function showItems(data) {
     btn.addEventListener("click", () => {
       addToCart(item);
     });
-    card_item.appendChild(btn);
+    card_item.appendChild(pTitle);
+    pTitle.classList = "item-title";
+    card_item.appendChild(pDiv);
+
     stars.appendChild(starImage);
-    card_item.appendChild(stars);
+    card_item.appendChild(btn);
 
     img_container.appendChild(img_warrper);
     // img.classList.add("card-img");
-    card_item.appendChild(pDiv);
+    pDiv.classList = "itme-info";
     pDiv.prepend(pPrice);
-    pDiv.appendChild(pTitle);
+    pDiv.appendChild(stars);
     card_item.prepend(img_container);
     cards_container.appendChild(card_item);
   });
 }
+
+export function deleteItem(id, data) {
+  let filterdData = data.filter((item) => item.id != id);
+
+  return filterdData;
+  // data = filterdData;
+  // console.log(filterdData, "after delete one item");
+  // showCartItems(data);
+}
+let websiteTitle;
+let websiteTitle_en = "Geschäft";
+let websiteTitle_ar = "متجر الكترنيـه";
+// let lang = "en";
+
+let title = document.getElementById("title");
+let select_lang = document.getElementById("lang-select");
+title.textContent = websiteTitle_en;
+select_lang.addEventListener("change", (e) => {
+  let selected_lang = e.target.value;
+  console.log(selected_lang, "language selected");
+  switch (selected_lang) {
+    case "en":
+      title.textContent = websiteTitle_en;
+      break;
+    case "ar":
+      title.textContent = websiteTitle_ar;
+      break;
+    default:
+      break;
+  }
+});

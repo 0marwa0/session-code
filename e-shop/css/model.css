@@ -22,8 +22,8 @@
   background-color: white;
 }
 .img-card-container {
-  width: 230px !important;
-  height: 350px !important;
+  width: 270px !important;
+  height: 390px !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,9 +35,21 @@
   object-fit: cover;
 }
 .item {
-  width: 230px;
-  height: 350px;
+  width: 270px;
+  height: auto;
   border-radius: 20px;
   padding: 0 5px;
-  border: 2px solid rgb(215, 215, 215);
+  border: 2px solid rgb(5, 211, 70);
+}
+.itme-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item-title {
+  height: 30px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

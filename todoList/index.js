@@ -1,9 +1,10 @@
 let data = [
-  { name: "Ahmed", id: 8488949, select: false },
-  { name: "Clean the desk", id: 9082490, select: false },
+  // { name: "Ahmed", id: 8488949, select: false },
+  // { name: "Clean the desk", id: 9082490, select: false },
 ];
 import { showTasks } from "./fun.js";
 const layout = document.querySelector(".layout");
+const content = document.querySelector(".content");
 const close_btn = document.querySelector(".close");
 const plus_btn = document.querySelector(".plus-btn");
 const task_input = document.getElementById("task_input");
@@ -14,6 +15,13 @@ plus_btn.addEventListener("click", () => {
 });
 close_btn.addEventListener("click", () => {
   layout.classList.toggle("hide");
+});
+
+layout.addEventListener("click", () => {
+  layout.classList.toggle("hide");
+});
+content.addEventListener("click", (e) => {
+  e.stopPropagation();
 });
 
 showTasks(data);
